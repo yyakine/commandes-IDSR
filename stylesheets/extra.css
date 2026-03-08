@@ -1,0 +1,54 @@
+.md-header__option label.md-header__button:not([hidden])::after {
+  content: attr(title);
+  font-size: 0.72rem;
+  color: var(--md-primary-bg-color);
+  white-space: nowrap;
+}
+
+.md-header__option label.md-header__button:not([hidden]) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Hides the site_name above sections */
+.md-nav--primary .md-nav__title[for="__drawer"] {
+  display: none;
+}
+
+/* bump up code font */
+.md-typeset code {
+  font-size: 0.63rem;
+}
+
+/* admonition size */
+.md-typeset blockquote {
+  font-size: 0.70rem;
+}
+
+
+/* Premier tab de chaque set = Debian/Ubuntu est bleu */
+.tabbed-labels > label:first-child {
+  color: #1a73e8;
+}
+.tabbed-set > input:first-child:checked ~ .tabbed-labels > label:first-child {
+  border-color: #1a73e8;
+  color: #1a73e8;
+}
+
+/* Deuxième tab de chaque set = Red Hat/Rocky est rouge */
+.tabbed-labels > label:nth-child(2) {
+  color: #cc0000;
+}
+.tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2) {
+  border-color: #cc0000;
+  color: #cc0000;
+}
+
+.cisco-prompt {
+  color: #ff5555;
+  font-weight: bold;
+  user-select: none; /* excluded from copy-paste */
+}
+
+
