@@ -1,0 +1,197 @@
+site_name: Commandes et Configurations IDSR
+site_url: https://yyakine.github.io/commandes-IDSR/
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+  font:
+    text: Merriweather Sans
+  logo: assets/icon.png
+  favicon: assets/favicon.ico
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark   #switched
+      primary: indigo
+      accent: amber
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light  #actually the dark mode, switched for the effect
+      primary: teal
+      accent: deep purple
+use_directory_urls: false
+
+markdown_extensions:
+  - tables
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.details      # collapsible admonitions (??? info)
+  - pymdownx.superfences  # code in admonitions
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true  #numéro de lignes
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true   # obligatoire, sans ça les tabs ne s'affichent pas
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/cisco-prompt.js
+
+
+#Structure#
+
+nav:
+
+  # ─────────────────────────────
+  # LINUX
+  # ─────────────────────────────
+
+  - Linux:
+
+    - Vue d'ensemble: linux/index.md
+  
+    - Système de fichiers:
+      - Navigation et manipulation: linux/systeme-fichiers/navigation.md
+      - Permissions et propriété: linux/systeme-fichiers/permissions.md
+      - Liens symboliques et physiques: linux/systeme-fichiers/liens.md
+      - Compression et archivage: linux/systeme-fichiers/archivage.md
+      - Disques et partitions: linux/systeme-fichiers/disques-partitions.md
+      - Gestion de volumes logiques LVM: linux/systeme-fichiers/lvm.md
+      - volumes RAID: linux/systeme-fichiers/raid.md
+
+    - Gestion du système:
+      - Gestion des packages:
+        - apt (Debian/Ubuntu): linux/gestion-systeme/packages/apt.md
+        - dnf (Redhat/Fedora): linux/gestion-systeme/packages/dnf.md
+        - rpm (Redhat/Fedora): linux/gestion-systeme/packages/rpm.md
+      - Utilisateurs et groupes: linux/gestion-systeme/utilisateurs-groupes.md
+      - Services et processus: linux/gestion-systeme/services-processus.md
+
+    - Réseau:
+      - Interfaces et adressage: linux/reseau/interfaces-adressage.md
+      - Pare-feu: linux/reseau/pare-feu.md
+      - Routage et passerelle:
+        - Routage statique: linux/reseau/routage/routage-statique.md
+        - Routage dynamique: linux/reseau/routage/routage-dynamique.md
+
+    - Services réseau:
+      - DHCP: linux/services/dhcp.md
+      - DNS: linux/services/dns.md
+      - HTTP: linux/services/http.md
+      - FTP: linux/services/ftp.md
+      - NFS: linux/services/nfs.md
+      - Samba: linux/services/samba.md
+      - LDAP:
+        - Introduction: linux/services/ldap/ldap.md
+        - slapd.conf: linux/services/ldap/slapd.conf.md
+        - slapd.d: linux/services/ldap/slapd.d.md
+
+    - Supervision Nagios: linux/supervision-nagios.md
+
+  # ─────────────────────────────
+  # WINDOWS
+  # ─────────────────────────────
+
+  - Windows:
+
+    - Vue d'ensemble: windows/index.md
+
+    - Configuration initiale: windows/configuration-initiale.md
+
+    - Active Directory:
+      - Installation et création de domaine: windows/active-directory/installer-ad-ds.md
+      - Gestion des Objets:
+        - Utilisateurs: windows/active-directory/gestion-objets/utilisateurs.md
+        - Groupes: windows/active-directory/gestion-objets/groupes.md
+        - Comptes: windows/active-directory/gestion-objets/comptes.md
+        - Déplacer des objets: windows/active-directory/gestion-objets/deplacer-objets.md
+        - Recherche avancée des utilisateurs: windows/active-directory/gestion-objets/recherche-avancee.md
+      - Batch et automatisation:
+        - CSVDE: windows/active-directory/batch-automatisation/csvde.md
+        - LDIFDE: windows/active-directory/batch-automatisation/ldifde.md
+        - Import-CSV: windows/active-directory/batch-automatisation/import-csv.md
+
+    - DHCP:
+      - Installation: windows/dhcp/installation.md
+      - DHCPv4:
+        - Étendues (scopes): windows/dhcp/dhcpv4/etendues.md
+        - Réservations et exclusions: windows/dhcp/dhcpv4/reservations-exclusions.md
+      - DHCPv6:
+        - Étendues IPv6: windows/dhcp/dhcpv6/etendues-ipv6.md
+        - Réservations et exclusions IPv6: windows/dhcp/dhcpv6/reservations-exclusions-ipv6.md
+
+    - DNS:
+      - Installation: windows/dns/installation.md
+      - Zones directes: windows/dns/zones-directes.md
+      - Zones inversées: windows/dns/zones-inversees.md
+      - Enregistrements de ressources: windows/dns/enregistrements.md
+  
+
+  # ─────────────────────────────
+  # CISCO
+  # ─────────────────────────────
+  - Cisco:
+
+    - Vue d'ensemble: cisco/index.md
+
+    - VLANs:
+      - VTP et création de VLANs: cisco/vlans/vtp-vlans.md
+      - Ports Access et Trunk: cisco/vlans/access-trunk.md
+      - Router on a Stick: cisco/vlans/router-on-a-stick.md
+      - Routage switch multicouches (SVI): cisco/vlans/svi.md
+      - DTP: cisco/vlans/dtp.md
+
+    - STP:
+      - Configuration et vérification: cisco/stp/configuration.md
+      - PortFast et BPDUGuard: cisco/stp/portfast-bpduguard.md
+
+    - EtherChannel:
+      - PAgP: cisco/etherchannel/pagp.md
+      - LACP: cisco/etherchannel/lacp.md
+
+    - HSRP: cisco/hsrp.md
+
+    - DHCP:
+      - DHCPv4: cisco/dhcp/dhcpv4.md
+      - DHCPv6: cisco/dhcp/dhcpv6.md
+
+    - Port-Security: cisco/port-security.md
+
+    - Routage:
+      - Routage statique: cisco/routage/statique.md
+      - RIP: cisco/routage/rip.md
+      - OSPF: cisco/routage/ospf.md
+      - EIGRP: cisco/routage/eigrp.md
+      - BGP: cisco/routage/bgp.md
+
+    - ACL:
+      - ACL Standard: cisco/acl/standard.md
+      - ACL Étendue: cisco/acl/etendue.md
+
+    - NAT:
+      - NAT Statique: cisco/nat/statique.md
+      - NAT Dynamique: cisco/nat/dynamique.md
+      - PAT: cisco/nat/pat.md
+
+    - VoIP: cisco/voip.md
+
+    - Gestion du réseau:
+      - CDP et LLDP: cisco/gestion/cdp-lldp.md
+      - NTP et horloge: cisco/gestion/ntp.md
+      - Système de fichiers: cisco/gestion/fichiers.md
+      - Sauvegarde et restauration: cisco/gestion/sauvegarde.md
+
+    - VPN:
+      - GRE: cisco/vpn/gre.md
+      - IPsec: cisco/vpn/ipsec.md
+
+
+

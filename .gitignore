@@ -1,0 +1,7 @@
+site/
+venv/
+__pycache__/
+.vscode/
+.idea/
+gitpush.txt
+*.log
