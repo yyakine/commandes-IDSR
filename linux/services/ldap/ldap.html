@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://yyakine.github.io/commandes-IDSR/linux/services/nfs.html">
+        <link rel="canonical" href="https://yyakine.github.io/commandes-IDSR/linux/services/ldap/ldap.html">
       
       
-        <link rel="prev" href="ftp.html">
+        <link rel="prev" href="../samba.html">
       
       
-        <link rel="next" href="samba.html">
+        <link rel="next" href="slapd.conf.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="icon" href="../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>NFS - Commandes et Configurations IDSR</title>
+        <title>Introduction - Commandes et Configurations IDSR</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nfs-network-file-system" class="md-skip">
+        <a href="#ldap-openldap" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Commandes et Configurations IDSR" class="md-header__button md-logo" aria-label="Commandes et Configurations IDSR" data-md-component="logo">
+    <a href="../../.." title="Commandes et Configurations IDSR" class="md-header__button md-logo" aria-label="Commandes et Configurations IDSR" data-md-component="logo">
       
-  <img src="../../assets/icon.png" alt="logo">
+  <img src="../../../assets/icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NFS
+              Introduction
             
           </span>
         </div>
@@ -219,9 +219,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Commandes et Configurations IDSR" class="md-nav__button md-logo" aria-label="Commandes et Configurations IDSR" data-md-component="logo">
+    <a href="../../.." title="Commandes et Configurations IDSR" class="md-nav__button md-logo" aria-label="Commandes et Configurations IDSR" data-md-component="logo">
       
-  <img src="../../assets/icon.png" alt="logo">
+  <img src="../../../assets/icon.png" alt="logo">
 
     </a>
     Commandes et Configurations IDSR
@@ -285,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -360,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/navigation.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/navigation.html" class="md-nav__link">
         
   
   
@@ -388,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/permissions.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/permissions.html" class="md-nav__link">
         
   
   
@@ -416,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/liens.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/liens.html" class="md-nav__link">
         
   
   
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/archivage.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/archivage.html" class="md-nav__link">
         
   
   
@@ -472,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/disques-partitions.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/disques-partitions.html" class="md-nav__link">
         
   
   
@@ -500,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/lvm.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/lvm.html" class="md-nav__link">
         
   
   
@@ -528,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/raid.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/raid.html" class="md-nav__link">
         
   
   
@@ -658,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/packages/apt.html" class="md-nav__link">
+      <a href="../../gestion-systeme/packages/apt.html" class="md-nav__link">
         
   
   
@@ -686,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/packages/dnf.html" class="md-nav__link">
+      <a href="../../gestion-systeme/packages/dnf.html" class="md-nav__link">
         
   
   
@@ -714,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/packages/rpm.html" class="md-nav__link">
+      <a href="../../gestion-systeme/packages/rpm.html" class="md-nav__link">
         
   
   
@@ -750,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/utilisateurs-groupes.html" class="md-nav__link">
+      <a href="../../gestion-systeme/utilisateurs-groupes.html" class="md-nav__link">
         
   
   
@@ -778,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/services-processus.html" class="md-nav__link">
+      <a href="../../gestion-systeme/services-processus.html" class="md-nav__link">
         
   
   
@@ -861,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/interfaces-adressage.html" class="md-nav__link">
+      <a href="../../reseau/interfaces-adressage.html" class="md-nav__link">
         
   
   
@@ -889,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/pare-feu.html" class="md-nav__link">
+      <a href="../../reseau/pare-feu.html" class="md-nav__link">
         
   
   
@@ -964,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/routage/routage-statique.html" class="md-nav__link">
+      <a href="../../reseau/routage/routage-statique.html" class="md-nav__link">
         
   
   
@@ -992,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/routage/routage-dynamique.html" class="md-nav__link">
+      <a href="../../reseau/routage/routage-dynamique.html" class="md-nav__link">
         
   
   
@@ -1085,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dhcp.html" class="md-nav__link">
+      <a href="../dhcp.html" class="md-nav__link">
         
   
   
@@ -1113,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dns.html" class="md-nav__link">
+      <a href="../dns.html" class="md-nav__link">
         
   
   
@@ -1141,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="http.html" class="md-nav__link">
+      <a href="../http.html" class="md-nav__link">
         
   
   
@@ -1169,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ftp.html" class="md-nav__link">
+      <a href="../ftp.html" class="md-nav__link">
         
   
   
@@ -1194,6 +1194,111 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samba
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
     
   
   
@@ -1213,7 +1318,7 @@
   <span class="md-ellipsis">
     
   
-    NFS
+    Introduction
   
 
     
@@ -1224,14 +1329,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="nfs.html" class="md-nav__link md-nav__link--active">
+      <a href="ldap.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    NFS
+    Introduction
   
 
     
@@ -1268,54 +1373,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fichiers-de-configuration" class="md-nav__link">
+  <a href="#deux-approches-de-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fichiers de configuration
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurer-les-partages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurer les partages
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commandes-cote-serveur" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commandes côté serveur
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commandes-cote-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commandes côté client
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifier-la-syntaxe-et-les-erreurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vérifier la syntaxe et les erreurs
+        Deux approches de configuration
       
     </span>
   </a>
@@ -1338,110 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="samba.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Samba
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    LDAP
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    LDAP
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ldap/ldap.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ldap/slapd.conf.html" class="md-nav__link">
+      <a href="slapd.conf.html" class="md-nav__link">
         
   
   
@@ -1469,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ldap/slapd.d.html" class="md-nav__link">
+      <a href="slapd.d.html" class="md-nav__link">
         
   
   
@@ -1513,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../supervision-nagios.html" class="md-nav__link">
+      <a href="../../supervision-nagios.html" class="md-nav__link">
         
   
   
@@ -1595,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/index.html" class="md-nav__link">
+      <a href="../../../windows/index.html" class="md-nav__link">
         
   
   
@@ -1623,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/configuration-initiale.html" class="md-nav__link">
+      <a href="../../../windows/configuration-initiale.html" class="md-nav__link">
         
   
   
@@ -1698,7 +1656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/installer-ad-ds.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/installer-ad-ds.html" class="md-nav__link">
         
   
   
@@ -1773,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/utilisateurs.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/utilisateurs.html" class="md-nav__link">
         
   
   
@@ -1801,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/groupes.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/groupes.html" class="md-nav__link">
         
   
   
@@ -1829,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/comptes.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/comptes.html" class="md-nav__link">
         
   
   
@@ -1857,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/deplacer-objets.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/deplacer-objets.html" class="md-nav__link">
         
   
   
@@ -1885,7 +1843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/recherche-avancee.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/recherche-avancee.html" class="md-nav__link">
         
   
   
@@ -1968,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/batch-automatisation/csvde.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/batch-automatisation/csvde.html" class="md-nav__link">
         
   
   
@@ -1996,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/batch-automatisation/ldifde.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/batch-automatisation/ldifde.html" class="md-nav__link">
         
   
   
@@ -2024,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/batch-automatisation/import-csv.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/batch-automatisation/import-csv.html" class="md-nav__link">
         
   
   
@@ -2115,7 +2073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/installation.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/installation.html" class="md-nav__link">
         
   
   
@@ -2190,7 +2148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/dhcpv4/etendues.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/dhcpv4/etendues.html" class="md-nav__link">
         
   
   
@@ -2218,7 +2176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/dhcpv4/reservations-exclusions.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/dhcpv4/reservations-exclusions.html" class="md-nav__link">
         
   
   
@@ -2301,7 +2259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/dhcpv6/etendues-ipv6.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/dhcpv6/etendues-ipv6.html" class="md-nav__link">
         
   
   
@@ -2329,7 +2287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/dhcpv6/reservations-exclusions-ipv6.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/dhcpv6/reservations-exclusions-ipv6.html" class="md-nav__link">
         
   
   
@@ -2420,7 +2378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dns/installation.html" class="md-nav__link">
+      <a href="../../../windows/dns/installation.html" class="md-nav__link">
         
   
   
@@ -2448,7 +2406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dns/zones-directes.html" class="md-nav__link">
+      <a href="../../../windows/dns/zones-directes.html" class="md-nav__link">
         
   
   
@@ -2476,7 +2434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dns/zones-inversees.html" class="md-nav__link">
+      <a href="../../../windows/dns/zones-inversees.html" class="md-nav__link">
         
   
   
@@ -2504,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dns/enregistrements.html" class="md-nav__link">
+      <a href="../../../windows/dns/enregistrements.html" class="md-nav__link">
         
   
   
@@ -2594,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/index.html" class="md-nav__link">
+      <a href="../../../cisco/index.html" class="md-nav__link">
         
   
   
@@ -2669,7 +2627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/vtp-vlans.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/vtp-vlans.html" class="md-nav__link">
         
   
   
@@ -2697,7 +2655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/access-trunk.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/access-trunk.html" class="md-nav__link">
         
   
   
@@ -2725,7 +2683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/router-on-a-stick.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/router-on-a-stick.html" class="md-nav__link">
         
   
   
@@ -2753,7 +2711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/svi.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/svi.html" class="md-nav__link">
         
   
   
@@ -2781,7 +2739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/dtp.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/dtp.html" class="md-nav__link">
         
   
   
@@ -2864,7 +2822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/stp/configuration.html" class="md-nav__link">
+      <a href="../../../cisco/stp/configuration.html" class="md-nav__link">
         
   
   
@@ -2892,7 +2850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/stp/portfast-bpduguard.html" class="md-nav__link">
+      <a href="../../../cisco/stp/portfast-bpduguard.html" class="md-nav__link">
         
   
   
@@ -2975,7 +2933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/etherchannel/pagp.html" class="md-nav__link">
+      <a href="../../../cisco/etherchannel/pagp.html" class="md-nav__link">
         
   
   
@@ -3003,7 +2961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/etherchannel/lacp.html" class="md-nav__link">
+      <a href="../../../cisco/etherchannel/lacp.html" class="md-nav__link">
         
   
   
@@ -3039,7 +2997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/hsrp.html" class="md-nav__link">
+      <a href="../../../cisco/hsrp.html" class="md-nav__link">
         
   
   
@@ -3114,7 +3072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/dhcp/dhcpv4.html" class="md-nav__link">
+      <a href="../../../cisco/dhcp/dhcpv4.html" class="md-nav__link">
         
   
   
@@ -3142,7 +3100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/dhcp/dhcpv6.html" class="md-nav__link">
+      <a href="../../../cisco/dhcp/dhcpv6.html" class="md-nav__link">
         
   
   
@@ -3178,7 +3136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/port-security.html" class="md-nav__link">
+      <a href="../../../cisco/port-security.html" class="md-nav__link">
         
   
   
@@ -3253,7 +3211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/statique.html" class="md-nav__link">
+      <a href="../../../cisco/routage/statique.html" class="md-nav__link">
         
   
   
@@ -3281,7 +3239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/rip.html" class="md-nav__link">
+      <a href="../../../cisco/routage/rip.html" class="md-nav__link">
         
   
   
@@ -3309,7 +3267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/ospf.html" class="md-nav__link">
+      <a href="../../../cisco/routage/ospf.html" class="md-nav__link">
         
   
   
@@ -3337,7 +3295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/eigrp.html" class="md-nav__link">
+      <a href="../../../cisco/routage/eigrp.html" class="md-nav__link">
         
   
   
@@ -3365,7 +3323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/bgp.html" class="md-nav__link">
+      <a href="../../../cisco/routage/bgp.html" class="md-nav__link">
         
   
   
@@ -3448,7 +3406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/acl/standard.html" class="md-nav__link">
+      <a href="../../../cisco/acl/standard.html" class="md-nav__link">
         
   
   
@@ -3476,7 +3434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/acl/etendue.html" class="md-nav__link">
+      <a href="../../../cisco/acl/etendue.html" class="md-nav__link">
         
   
   
@@ -3559,7 +3517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/nat/statique.html" class="md-nav__link">
+      <a href="../../../cisco/nat/statique.html" class="md-nav__link">
         
   
   
@@ -3587,7 +3545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/nat/dynamique.html" class="md-nav__link">
+      <a href="../../../cisco/nat/dynamique.html" class="md-nav__link">
         
   
   
@@ -3615,7 +3573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/nat/pat.html" class="md-nav__link">
+      <a href="../../../cisco/nat/pat.html" class="md-nav__link">
         
   
   
@@ -3651,7 +3609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/voip.html" class="md-nav__link">
+      <a href="../../../cisco/voip.html" class="md-nav__link">
         
   
   
@@ -3726,7 +3684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/gestion/cdp-lldp.html" class="md-nav__link">
+      <a href="../../../cisco/gestion/cdp-lldp.html" class="md-nav__link">
         
   
   
@@ -3754,7 +3712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/gestion/ntp.html" class="md-nav__link">
+      <a href="../../../cisco/gestion/ntp.html" class="md-nav__link">
         
   
   
@@ -3782,7 +3740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/gestion/fichiers.html" class="md-nav__link">
+      <a href="../../../cisco/gestion/fichiers.html" class="md-nav__link">
         
   
   
@@ -3810,7 +3768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/gestion/sauvegarde.html" class="md-nav__link">
+      <a href="../../../cisco/gestion/sauvegarde.html" class="md-nav__link">
         
   
   
@@ -3893,7 +3851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vpn/gre.html" class="md-nav__link">
+      <a href="../../../cisco/vpn/gre.html" class="md-nav__link">
         
   
   
@@ -3921,7 +3879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vpn/ipsec.html" class="md-nav__link">
+      <a href="../../../cisco/vpn/ipsec.html" class="md-nav__link">
         
   
   
@@ -3995,54 +3953,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fichiers-de-configuration" class="md-nav__link">
+  <a href="#deux-approches-de-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fichiers de configuration
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurer-les-partages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurer les partages
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commandes-cote-serveur" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commandes côté serveur
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commandes-cote-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commandes côté client
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifier-la-syntaxe-et-les-erreurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vérifier la syntaxe et les erreurs
+        Deux approches de configuration
       
     </span>
   </a>
@@ -4066,120 +3980,23 @@
 
 
 
-<h1 id="nfs-network-file-system">NFS (Network File System)</h1>
+<h1 id="ldap-openldap">LDAP (OpenLDAP)</h1>
 <h2 id="installation">Installation</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian / Ubuntu</label><label for="__tabbed_1_2">Red Hat / Rocky / Fedora</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Serveur</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>apt<span class="w"> </span>install<span class="w"> </span>nfs-kernel-server<span class="w"> </span>-y
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Client</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>apt<span class="w"> </span>install<span class="w"> </span>nfs-common<span class="w"> </span>-y
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt<span class="w"> </span>install<span class="w"> </span>slapd<span class="w"> </span>ldap-utils<span class="w"> </span>-y
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Serveur et client</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>dnf<span class="w"> </span>install<span class="w"> </span>nfs-utils<span class="w"> </span>-y
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dnf<span class="w"> </span>install<span class="w"> </span>openldap<span class="w"> </span>openldap-servers<span class="w"> </span>openldap-clients<span class="w"> </span>-y
 </code></pre></div>
 </div>
 </div>
 </div>
-<h2 id="fichiers-de-configuration">Fichiers de configuration</h2>
-<table>
-<thead>
-<tr>
-<th>Fichier</th>
-<th>Rôle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/etc/exports</code></td>
-<td>Définition des partages NFS</td>
-</tr>
-<tr>
-<td><code>/var/lib/nfs/etab</code></td>
-<td>Table interne des exports actifs</td>
-</tr>
-<tr>
-<td><code>/etc/fstab</code></td>
-<td>Montages persistants côté client</td>
-</tr>
-</tbody>
-</table>
-<h2 id="configurer-les-partages">Configurer les partages</h2>
-<div class="language-ini highlight"><span class="filename">/etc/exports</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Syntaxe : &lt;répertoire&gt; &lt;client&gt;(&lt;options&gt;)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">/srv/data    192.168.1.0/24(rw,sync,no_subtree_check)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">/srv/public  *(ro,sync,no_subtree_check)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="na">/srv/admin   192.168.1.10(rw,sync,no_root_squash)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>rw</code></td>
-<td>Lecture et écriture</td>
-</tr>
-<tr>
-<td><code>ro</code></td>
-<td>Lecture seule</td>
-</tr>
-<tr>
-<td><code>sync</code></td>
-<td>Écriture synchrone, plus sûr</td>
-</tr>
-<tr>
-<td><code>no_subtree_check</code></td>
-<td>Désactive la vérification de sous-arborescence, améliore les performances</td>
-</tr>
-<tr>
-<td><code>no_root_squash</code></td>
-<td>Le root client garde ses privilèges root sur le partage</td>
-</tr>
-<tr>
-<td><code>root_squash</code></td>
-<td>Le root client est mappé sur nobody (défaut, plus sûr)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="commandes-cote-serveur">Commandes côté serveur</h2>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>nfs-server<span class="w">     </span><span class="c1"># Démarrer le serveur NFS</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>exportfs<span class="w"> </span>-a<span class="w">                           </span><span class="c1"># Appliquer /etc/exports sans redémarrer</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>exportfs<span class="w"> </span>-r<span class="w">                           </span><span class="c1"># Recharger et re-exporter</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>exportfs<span class="w"> </span>-v<span class="w">                           </span><span class="c1"># Afficher les partages actifs</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>showmount<span class="w"> </span>-e<span class="w"> </span>localhost<span class="w">                </span><span class="c1"># Lister les partages exportés</span>
-</code></pre></div>
-<h2 id="commandes-cote-client">Commandes côté client</h2>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>showmount<span class="w"> </span>-e<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">              </span><span class="c1"># Lister les partages disponibles sur un serveur</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>mount<span class="w"> </span>-t<span class="w"> </span>nfs<span class="w"> </span><span class="m">192</span>.168.1.1:/srv/data<span class="w"> </span>/mnt/data<span class="w">    </span><span class="c1"># Monter un partage manuellement</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>umount<span class="w"> </span>/mnt/data<span class="w">                      </span><span class="c1"># Démonter</span>
-</code></pre></div>
-<div class="language-bash highlight"><span class="filename">/etc/fstab — montage persistant côté client</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="m">192</span>.168.1.1:/srv/data<span class="w">  </span>/mnt/data<span class="w">  </span>nfs<span class="w">  </span>defaults,_netdev<span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">0</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">_netdev</p>
-<p>L'option <code>_netdev</code> indique au système d'attendre que le réseau soit disponible avant de monter le partage au démarrage.</p>
-</div>
-<h2 id="verifier-la-syntaxe-et-les-erreurs">Vérifier la syntaxe et les erreurs</h2>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>exportfs<span class="w"> </span>-v<span class="w">                           </span><span class="c1"># Vérifier les exports actifs</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>nfs-server<span class="w"> </span>-f<span class="w">           </span><span class="c1"># Logs en temps réel (Debian)</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>nfs-server<span class="w"> </span>-f<span class="w">           </span><span class="c1"># Logs en temps réel (Red Hat)</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>showmount<span class="w"> </span>-e<span class="w"> </span>localhost<span class="w">                </span><span class="c1"># Confirmer que les partages sont bien exportés</span>
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Pare-feu</p>
-<p>NFS utilise plusieurs ports. Le plus simple est d'autoriser le port 2049 :
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="m">2049</span><span class="w"> </span>accept
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>udp<span class="w"> </span>dport<span class="w"> </span><span class="m">2049</span><span class="w"> </span>accept
-</code></pre></div></p>
-</div>
+<h2 id="deux-approches-de-configuration">Deux approches de configuration</h2>
+<p>Après installation, slapd démarre avec un répertoire <code>slapd.d/</code> — c'est la configuration <strong>OLC</strong> (On-Line Configuration). Cette methode est plus moderne.
+L'ancienne methode utilise le fichier de configuration plat <code>slapd.conf</code>.</p>
 
 
 
@@ -4229,12 +4046,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/cisco-prompt.js"></script>
+        <script src="../../../javascripts/cisco-prompt.js"></script>
       
     
   </body>

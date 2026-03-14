@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://yyakine.github.io/commandes-IDSR/linux/services/ldap.html">
+        <link rel="canonical" href="https://yyakine.github.io/commandes-IDSR/linux/services/ldap/slapd.conf.html">
       
       
-        <link rel="prev" href="samba.html">
+        <link rel="prev" href="ldap.html">
       
       
-        <link rel="next" href="../supervision-nagios.html">
+        <link rel="next" href="slapd.d.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="icon" href="../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>LDAP - Commandes et Configurations IDSR</title>
+        <title>slapd.conf - Commandes et Configurations IDSR</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ldap-openldap" class="md-skip">
+        <a href="#fichiers-de-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Commandes et Configurations IDSR" class="md-header__button md-logo" aria-label="Commandes et Configurations IDSR" data-md-component="logo">
+    <a href="../../.." title="Commandes et Configurations IDSR" class="md-header__button md-logo" aria-label="Commandes et Configurations IDSR" data-md-component="logo">
       
-  <img src="../../assets/icon.png" alt="logo">
+  <img src="../../../assets/icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LDAP
+              slapd.conf
             
           </span>
         </div>
@@ -219,9 +219,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Commandes et Configurations IDSR" class="md-nav__button md-logo" aria-label="Commandes et Configurations IDSR" data-md-component="logo">
+    <a href="../../.." title="Commandes et Configurations IDSR" class="md-nav__button md-logo" aria-label="Commandes et Configurations IDSR" data-md-component="logo">
       
-  <img src="../../assets/icon.png" alt="logo">
+  <img src="../../../assets/icon.png" alt="logo">
 
     </a>
     Commandes et Configurations IDSR
@@ -285,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -360,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/navigation.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/navigation.html" class="md-nav__link">
         
   
   
@@ -388,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/permissions.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/permissions.html" class="md-nav__link">
         
   
   
@@ -416,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/liens.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/liens.html" class="md-nav__link">
         
   
   
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/archivage.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/archivage.html" class="md-nav__link">
         
   
   
@@ -472,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/disques-partitions.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/disques-partitions.html" class="md-nav__link">
         
   
   
@@ -500,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/lvm.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/lvm.html" class="md-nav__link">
         
   
   
@@ -528,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systeme-fichiers/raid.html" class="md-nav__link">
+      <a href="../../systeme-fichiers/raid.html" class="md-nav__link">
         
   
   
@@ -658,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/packages/apt.html" class="md-nav__link">
+      <a href="../../gestion-systeme/packages/apt.html" class="md-nav__link">
         
   
   
@@ -686,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/packages/dnf.html" class="md-nav__link">
+      <a href="../../gestion-systeme/packages/dnf.html" class="md-nav__link">
         
   
   
@@ -714,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/packages/rpm.html" class="md-nav__link">
+      <a href="../../gestion-systeme/packages/rpm.html" class="md-nav__link">
         
   
   
@@ -750,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/utilisateurs-groupes.html" class="md-nav__link">
+      <a href="../../gestion-systeme/utilisateurs-groupes.html" class="md-nav__link">
         
   
   
@@ -778,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gestion-systeme/services-processus.html" class="md-nav__link">
+      <a href="../../gestion-systeme/services-processus.html" class="md-nav__link">
         
   
   
@@ -861,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/interfaces-adressage.html" class="md-nav__link">
+      <a href="../../reseau/interfaces-adressage.html" class="md-nav__link">
         
   
   
@@ -889,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/pare-feu.html" class="md-nav__link">
+      <a href="../../reseau/pare-feu.html" class="md-nav__link">
         
   
   
@@ -964,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/routage/routage-statique.html" class="md-nav__link">
+      <a href="../../reseau/routage/routage-statique.html" class="md-nav__link">
         
   
   
@@ -992,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reseau/routage/routage-dynamique.html" class="md-nav__link">
+      <a href="../../reseau/routage/routage-dynamique.html" class="md-nav__link">
         
   
   
@@ -1085,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dhcp.html" class="md-nav__link">
+      <a href="../dhcp.html" class="md-nav__link">
         
   
   
@@ -1113,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dns.html" class="md-nav__link">
+      <a href="../dns.html" class="md-nav__link">
         
   
   
@@ -1141,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="http.html" class="md-nav__link">
+      <a href="../http.html" class="md-nav__link">
         
   
   
@@ -1169,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ftp.html" class="md-nav__link">
+      <a href="../ftp.html" class="md-nav__link">
         
   
   
@@ -1197,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nfs.html" class="md-nav__link">
+      <a href="../nfs.html" class="md-nav__link">
         
   
   
@@ -1225,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="samba.html" class="md-nav__link">
+      <a href="../samba.html" class="md-nav__link">
         
   
   
@@ -1254,16 +1254,20 @@
   
   
   
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" checked>
+        
           
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1277,17 +1281,88 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="ldap.html" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldap.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    LDAP
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="slapd.conf.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
   
 
     
@@ -1303,25 +1378,12 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#fichiers-de-configuration" class="md-nav__link">
@@ -1335,24 +1397,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initialiser-le-serveur" class="md-nav__link">
+  <a href="#fichiers-ldif-principe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initialiser le serveur
+        Fichiers LDIF Principe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichiers LDIF Principe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-de-base-domaine-et-ous-baseldif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure de base : Domaine et OUs (base.ldif)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fichiers-ldif" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-un-utilisateur-usersldif" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fichiers LDIF
+        Ajouter un utilisateur (users.ldif)
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-une-entree-existante-modifldif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifier une entrée existante (modif.ldif)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1379,27 +1469,16 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#structure-dun-fichier-modifldif" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Structure d'un fichier modif.ldif
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifier-la-syntaxe-et-les-erreurs" class="md-nav__link">
+  <a href="#verification-et-debug" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vérifier la syntaxe et les erreurs
+        Vérification et debug
       
     </span>
   </a>
@@ -1409,6 +1488,42 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="slapd.d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.d
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1430,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../supervision-nagios.html" class="md-nav__link">
+      <a href="../../supervision-nagios.html" class="md-nav__link">
         
   
   
@@ -1512,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/index.html" class="md-nav__link">
+      <a href="../../../windows/index.html" class="md-nav__link">
         
   
   
@@ -1540,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/configuration-initiale.html" class="md-nav__link">
+      <a href="../../../windows/configuration-initiale.html" class="md-nav__link">
         
   
   
@@ -1615,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/installer-ad-ds.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/installer-ad-ds.html" class="md-nav__link">
         
   
   
@@ -1690,7 +1805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/utilisateurs.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/utilisateurs.html" class="md-nav__link">
         
   
   
@@ -1718,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/groupes.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/groupes.html" class="md-nav__link">
         
   
   
@@ -1746,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/comptes.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/comptes.html" class="md-nav__link">
         
   
   
@@ -1774,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/deplacer-objets.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/deplacer-objets.html" class="md-nav__link">
         
   
   
@@ -1802,7 +1917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/gestion-objets/recherche-avancee.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/gestion-objets/recherche-avancee.html" class="md-nav__link">
         
   
   
@@ -1885,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/batch-automatisation/csvde.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/batch-automatisation/csvde.html" class="md-nav__link">
         
   
   
@@ -1913,7 +2028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/batch-automatisation/ldifde.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/batch-automatisation/ldifde.html" class="md-nav__link">
         
   
   
@@ -1941,7 +2056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/active-directory/batch-automatisation/import-csv.html" class="md-nav__link">
+      <a href="../../../windows/active-directory/batch-automatisation/import-csv.html" class="md-nav__link">
         
   
   
@@ -2032,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/installation.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/installation.html" class="md-nav__link">
         
   
   
@@ -2107,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/dhcpv4/etendues.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/dhcpv4/etendues.html" class="md-nav__link">
         
   
   
@@ -2135,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/dhcpv4/reservations-exclusions.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/dhcpv4/reservations-exclusions.html" class="md-nav__link">
         
   
   
@@ -2218,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/dhcpv6/etendues-ipv6.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/dhcpv6/etendues-ipv6.html" class="md-nav__link">
         
   
   
@@ -2246,7 +2361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dhcp/dhcpv6/reservations-exclusions-ipv6.html" class="md-nav__link">
+      <a href="../../../windows/dhcp/dhcpv6/reservations-exclusions-ipv6.html" class="md-nav__link">
         
   
   
@@ -2337,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dns/installation.html" class="md-nav__link">
+      <a href="../../../windows/dns/installation.html" class="md-nav__link">
         
   
   
@@ -2365,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dns/zones-directes.html" class="md-nav__link">
+      <a href="../../../windows/dns/zones-directes.html" class="md-nav__link">
         
   
   
@@ -2393,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dns/zones-inversees.html" class="md-nav__link">
+      <a href="../../../windows/dns/zones-inversees.html" class="md-nav__link">
         
   
   
@@ -2421,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/dns/enregistrements.html" class="md-nav__link">
+      <a href="../../../windows/dns/enregistrements.html" class="md-nav__link">
         
   
   
@@ -2511,7 +2626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/index.html" class="md-nav__link">
+      <a href="../../../cisco/index.html" class="md-nav__link">
         
   
   
@@ -2586,7 +2701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/vtp-vlans.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/vtp-vlans.html" class="md-nav__link">
         
   
   
@@ -2614,7 +2729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/access-trunk.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/access-trunk.html" class="md-nav__link">
         
   
   
@@ -2642,7 +2757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/router-on-a-stick.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/router-on-a-stick.html" class="md-nav__link">
         
   
   
@@ -2670,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/svi.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/svi.html" class="md-nav__link">
         
   
   
@@ -2698,7 +2813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vlans/dtp.html" class="md-nav__link">
+      <a href="../../../cisco/vlans/dtp.html" class="md-nav__link">
         
   
   
@@ -2781,7 +2896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/stp/configuration.html" class="md-nav__link">
+      <a href="../../../cisco/stp/configuration.html" class="md-nav__link">
         
   
   
@@ -2809,7 +2924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/stp/portfast-bpduguard.html" class="md-nav__link">
+      <a href="../../../cisco/stp/portfast-bpduguard.html" class="md-nav__link">
         
   
   
@@ -2892,7 +3007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/etherchannel/pagp.html" class="md-nav__link">
+      <a href="../../../cisco/etherchannel/pagp.html" class="md-nav__link">
         
   
   
@@ -2920,7 +3035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/etherchannel/lacp.html" class="md-nav__link">
+      <a href="../../../cisco/etherchannel/lacp.html" class="md-nav__link">
         
   
   
@@ -2956,7 +3071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/hsrp.html" class="md-nav__link">
+      <a href="../../../cisco/hsrp.html" class="md-nav__link">
         
   
   
@@ -3031,7 +3146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/dhcp/dhcpv4.html" class="md-nav__link">
+      <a href="../../../cisco/dhcp/dhcpv4.html" class="md-nav__link">
         
   
   
@@ -3059,7 +3174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/dhcp/dhcpv6.html" class="md-nav__link">
+      <a href="../../../cisco/dhcp/dhcpv6.html" class="md-nav__link">
         
   
   
@@ -3095,7 +3210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/port-security.html" class="md-nav__link">
+      <a href="../../../cisco/port-security.html" class="md-nav__link">
         
   
   
@@ -3170,7 +3285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/statique.html" class="md-nav__link">
+      <a href="../../../cisco/routage/statique.html" class="md-nav__link">
         
   
   
@@ -3198,7 +3313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/rip.html" class="md-nav__link">
+      <a href="../../../cisco/routage/rip.html" class="md-nav__link">
         
   
   
@@ -3226,7 +3341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/ospf.html" class="md-nav__link">
+      <a href="../../../cisco/routage/ospf.html" class="md-nav__link">
         
   
   
@@ -3254,7 +3369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/eigrp.html" class="md-nav__link">
+      <a href="../../../cisco/routage/eigrp.html" class="md-nav__link">
         
   
   
@@ -3282,7 +3397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/routage/bgp.html" class="md-nav__link">
+      <a href="../../../cisco/routage/bgp.html" class="md-nav__link">
         
   
   
@@ -3365,7 +3480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/acl/standard.html" class="md-nav__link">
+      <a href="../../../cisco/acl/standard.html" class="md-nav__link">
         
   
   
@@ -3393,7 +3508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/acl/etendue.html" class="md-nav__link">
+      <a href="../../../cisco/acl/etendue.html" class="md-nav__link">
         
   
   
@@ -3476,7 +3591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/nat/statique.html" class="md-nav__link">
+      <a href="../../../cisco/nat/statique.html" class="md-nav__link">
         
   
   
@@ -3504,7 +3619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/nat/dynamique.html" class="md-nav__link">
+      <a href="../../../cisco/nat/dynamique.html" class="md-nav__link">
         
   
   
@@ -3532,7 +3647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/nat/pat.html" class="md-nav__link">
+      <a href="../../../cisco/nat/pat.html" class="md-nav__link">
         
   
   
@@ -3568,7 +3683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/voip.html" class="md-nav__link">
+      <a href="../../../cisco/voip.html" class="md-nav__link">
         
   
   
@@ -3643,7 +3758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/gestion/cdp-lldp.html" class="md-nav__link">
+      <a href="../../../cisco/gestion/cdp-lldp.html" class="md-nav__link">
         
   
   
@@ -3671,7 +3786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/gestion/ntp.html" class="md-nav__link">
+      <a href="../../../cisco/gestion/ntp.html" class="md-nav__link">
         
   
   
@@ -3699,7 +3814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/gestion/fichiers.html" class="md-nav__link">
+      <a href="../../../cisco/gestion/fichiers.html" class="md-nav__link">
         
   
   
@@ -3727,7 +3842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/gestion/sauvegarde.html" class="md-nav__link">
+      <a href="../../../cisco/gestion/sauvegarde.html" class="md-nav__link">
         
   
   
@@ -3810,7 +3925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vpn/gre.html" class="md-nav__link">
+      <a href="../../../cisco/vpn/gre.html" class="md-nav__link">
         
   
   
@@ -3838,7 +3953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cisco/vpn/ipsec.html" class="md-nav__link">
+      <a href="../../../cisco/vpn/ipsec.html" class="md-nav__link">
         
   
   
@@ -3891,25 +4006,12 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#fichiers-de-configuration" class="md-nav__link">
@@ -3923,24 +4025,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initialiser-le-serveur" class="md-nav__link">
+  <a href="#fichiers-ldif-principe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initialiser le serveur
+        Fichiers LDIF Principe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichiers LDIF Principe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-de-base-domaine-et-ous-baseldif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure de base : Domaine et OUs (base.ldif)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fichiers-ldif" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-un-utilisateur-usersldif" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fichiers LDIF
+        Ajouter un utilisateur (users.ldif)
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-une-entree-existante-modifldif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifier une entrée existante (modif.ldif)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3967,27 +4097,16 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#structure-dun-fichier-modifldif" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Structure d'un fichier modif.ldif
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifier-la-syntaxe-et-les-erreurs" class="md-nav__link">
+  <a href="#verification-et-debug" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vérifier la syntaxe et les erreurs
+        Vérification et debug
       
     </span>
   </a>
@@ -4011,26 +4130,36 @@
 
 
 
-<h1 id="ldap-openldap">LDAP — OpenLDAP</h1>
-<p>OpenLDAP est un annuaire réseau qui centralise l'authentification et les informations des utilisateurs. Il utilise une structure hiérarchique en arbre appelée DIT (Directory Information Tree).</p>
-<h2 id="installation">Installation</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian / Ubuntu</label><label for="__tabbed_1_2">Red Hat / Rocky / Fedora</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt<span class="w"> </span>install<span class="w"> </span>slapd<span class="w"> </span>ldap-utils<span class="w"> </span>-y
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># L&#39;installation demande directement le mot de passe admin</span>
+  <h1>slapd.conf</h1>
+
+<p>Créer <code>/etc/openldap/slapd.conf</code> :</p>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>include /etc/openldap/schema/core.schema
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>include /etc/openldap/schema/cosine.schema
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>include /etc/openldap/schema/nis.schema
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>include /etc/openldap/schema/inetorgperson.schema
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>pidfile  /var/run/openldap/slapd.pid
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>argsfile /var/run/openldap/slapd.args
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>database    mdb
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>maxsize     1073741824
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>suffix      &quot;dc=hassania,dc=ma&quot;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>rootdn      &quot;cn=Manager,dc=hassania,dc=ma&quot;
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>rootpw      {SSHA}HASH_GENERE_PAR_SLAPPASSWD
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>directory   /var/lib/ldap
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>index objectClass eq,pres
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dnf<span class="w"> </span>install<span class="w"> </span>openldap<span class="w"> </span>openldap-servers<span class="w"> </span>openldap-clients<span class="w"> </span>-y
-</code></pre></div>
-</div>
-</div>
-</div>
+<p>Générer le hash du mot de passe Manager :
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>slappasswd
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Copier le {SSHA}xxx dans slapd.conf</span>
+</code></pre></div></p>
+<p>Fixer les permissions et démarrer :
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chown<span class="w"> </span>-R<span class="w"> </span>ldap:ldap<span class="w"> </span>/var/lib/ldap
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>slaptest<span class="w"> </span>-f<span class="w"> </span>/etc/openldap/slapd.conf<span class="w"> </span>-v<span class="w">   </span><span class="c1"># Tester la config</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>systemctl<span class="w"> </span>start<span class="w"> </span>slapd
+</code></pre></div></p>
 <h2 id="fichiers-de-configuration">Fichiers de configuration</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian / Ubuntu</label><label for="__tabbed_2_2">Red Hat / Rocky / Fedora</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -4040,36 +4169,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>/etc/ldap/slapd.d/</code></td>
-<td>Configuration dynamique (OLC)</td>
-</tr>
-<tr>
-<td><code>/etc/ldap/ldap.conf</code></td>
-<td>Configuration client</td>
-</tr>
-<tr>
-<td><code>/var/lib/ldap/</code></td>
-<td>Base de données LDAP</td>
-</tr>
-<tr>
-<td><code>/var/log/syslog</code></td>
-<td>Logs slapd</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th>Fichier</th>
-<th>Rôle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/etc/openldap/slapd.d/</code></td>
-<td>Configuration dynamique (OLC)</td>
+<td><code>/etc/openldap/slapd.conf</code></td>
+<td>Configuration du serveur (méthode flat file)</td>
 </tr>
 <tr>
 <td><code>/etc/openldap/ldap.conf</code></td>
@@ -4077,51 +4178,38 @@
 </tr>
 <tr>
 <td><code>/var/lib/ldap/</code></td>
-<td>Base de données LDAP</td>
+<td>Base de données LDAP (données réelles)</td>
 </tr>
 <tr>
-<td><code>/var/log/messages</code></td>
-<td>Logs slapd</td>
+<td><code>/etc/openldap/schema/</code></td>
+<td>Schémas (définissent les objectClass disponibles)</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-<h2 id="initialiser-le-serveur">Initialiser le serveur</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Debian / Ubuntu</label><label for="__tabbed_3_2">Red Hat / Fedora</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>dpkg-reconfigure<span class="w"> </span>slapd<span class="w">        </span><span class="c1"># Reconfigurer le domaine et le mot de passe admin</span>
+<h2 id="fichiers-ldif-principe">Fichiers LDIF Principe</h2>
+<p>Un fichier <code>.ldif</code> est un simple fichier texte. <strong>Il ne fait rien tant qu'il n'est pas injecté</strong> avec <code>ldapadd</code> ou <code>ldapmodify</code>.</p>
+<p>Les fichier <code>.ldif</code> peuvent être créés n'importe où.</p>
+<h3 id="structure-de-base-domaine-et-ous-baseldif">Structure de base : Domaine et OUs (base.ldif)</h3>
+<div class="language-ldif highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">dc</span><span class="o">=</span><span class="s">hassania</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">ma</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">top</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">dcObject</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">organization</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="na">o</span><span class="p">:</span><span class="w"> </span><span class="s">Mon Organisation</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="na">dc</span><span class="p">:</span><span class="w"> </span><span class="s">hassania</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">ou</span><span class="o">=</span><span class="s">users</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">hassania</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">ma</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">organizationalUnit</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="na">ou</span><span class="p">:</span><span class="w"> </span><span class="s">users</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">ou</span><span class="o">=</span><span class="s">groups</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">hassania</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">ma</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">organizationalUnit</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="na">ou</span><span class="p">:</span><span class="w"> </span><span class="s">groups</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Générer un mot de passe hashé</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>slappasswd<span class="w">                            </span><span class="c1"># Génère un hash à coller dans le LDIF</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>slapd
-</code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="fichiers-ldif">Fichiers LDIF</h2>
-<p>Les modifications dans OpenLDAP se font via des fichiers <code>.ldif</code>.</p>
-<div class="language-ldif highlight"><span class="filename">base.ldif — créer la structure de base</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">dc</span><span class="o">=</span><span class="s">lan</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">top</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">dcObject</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">organization</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="na">o</span><span class="p">:</span><span class="w"> </span><span class="s">Mon Organisation</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="na">dc</span><span class="p">:</span><span class="w"> </span><span class="s">lan</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">ou</span><span class="o">=</span><span class="s">users</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">lan</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">organizationalUnit</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="na">ou</span><span class="p">:</span><span class="w"> </span><span class="s">users</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">ou</span><span class="o">=</span><span class="s">groups</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">lan</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">organizationalUnit</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="na">ou</span><span class="p">:</span><span class="w"> </span><span class="s">groups</span>
-</code></pre></div>
-<div class="language-ldif highlight"><span class="filename">user.ldif — ajouter un utilisateur</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">cn</span><span class="o">=</span><span class="s">younes</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">users</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">lan</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
+<h3 id="ajouter-un-utilisateur-usersldif">Ajouter un utilisateur (users.ldif)</h3>
+<p>Générer le hash du mot de passe utilisateur d'abord :
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>slappasswd<span class="w"> </span>-s<span class="w"> </span>TonMotDePasse
+</code></pre></div></p>
+<div class="language-ldif highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">cn</span><span class="o">=</span><span class="s">younes</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">users</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">hassania</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">ma</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">inetOrgPerson</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">posixAccount</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">shadowAccount</span>
@@ -4134,20 +4222,41 @@
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="na">loginShell</span><span class="p">:</span><span class="w"> </span><span class="s">/bin/bash</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="na">userPassword</span><span class="p">:</span><span class="w"> </span><span class="s">{SSHA}hash_genere_par_slappasswd</span>
 </code></pre></div>
+<h3 id="modifier-une-entree-existante-modifldif">Modifier une entrée existante (modif.ldif)</h3>
+<div class="language-ldif highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">cn</span><span class="o">=</span><span class="s">younes</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">users</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">hassania</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">ma</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">changetype</span><span class="p">:</span><span class="w"> </span><span class="k">modify</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">replace</span><span class="p">:</span><span class="w"> </span><span class="na">mail</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="na">mail</span><span class="p">:</span><span class="w"> </span><span class="s">younes@hassania.ma</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">-</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">add</span><span class="p">:</span><span class="w"> </span><span class="na">telephoneNumber</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="na">telephoneNumber</span><span class="p">:</span><span class="w"> </span><span class="s">0612345678</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">-</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="k">delete</span><span class="p">:</span><span class="w"> </span><span class="na">description</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Le tiret <code>-</code></p>
+<p>Sépare les opérations dans un même fichier <code>modif.ldif</code>. Chaque bloc peut faire une action différente sur la même entrée.</p>
+</div>
 <h2 id="commandes">Commandes</h2>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Ajouter des entrées</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=admin,dc=lan,dc=local&quot;</span><span class="w"> </span>-W<span class="w"> </span>-f<span class="w"> </span>base.ldif
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=admin,dc=lan,dc=local&quot;</span><span class="w"> </span>-W<span class="w"> </span>-f<span class="w"> </span>user.ldif
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1"># Rechercher</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;dc=lan,dc=local&quot;</span><span class="w"> </span><span class="s2">&quot;(objectClass=*)&quot;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;ou=users,dc=lan,dc=local&quot;</span><span class="w"> </span><span class="s2">&quot;(uid=younes)&quot;</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># Modifier</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>ldapmodify<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=admin,dc=lan,dc=local&quot;</span><span class="w"> </span>-W<span class="w"> </span>-f<span class="w"> </span>modif.ldif
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="c1"># Supprimer</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>ldapdelete<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=admin,dc=lan,dc=local&quot;</span><span class="w"> </span>-W<span class="w"> </span><span class="s2">&quot;cn=younes,ou=users,dc=lan,dc=local&quot;</span>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Après avoir créé les fichiers ldif, il faut les injecter à l'aide de <code>ldapadd</code> </p>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Injecter des entrées (ordre important : base avant users)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=Manager,dc=hassania,dc=ma&quot;</span><span class="w"> </span>-W<span class="w"> </span>-f<span class="w"> </span>base.ldif
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=Manager,dc=hassania,dc=ma&quot;</span><span class="w"> </span>-W<span class="w"> </span>-f<span class="w"> </span>users.ldif
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># Modifier</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>ldapmodify<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=Manager,dc=hassania,dc=ma&quot;</span><span class="w"> </span>-W<span class="w"> </span>-f<span class="w"> </span>modif.ldif
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1"># Supprimer une entrée</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>ldapdelete<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="s2">&quot;cn=Manager,dc=hassania,dc=ma&quot;</span><span class="w"> </span>-W<span class="w"> </span><span class="s2">&quot;cn=younes,ou=users,dc=hassania,dc=ma&quot;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1"># Rechercher tout l&#39;annuaire</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;dc=hassania,dc=ma&quot;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># Rechercher un utilisateur spécifique</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;ou=users,dc=hassania,dc=ma&quot;</span><span class="w"> </span><span class="s2">&quot;(uid=younes)&quot;</span>
 </code></pre></div>
 <h3 id="options-communes">Options communes</h3>
 <table>
@@ -4163,7 +4272,7 @@
 <td>Authentification simple, sans SASL</td>
 </tr>
 <tr>
-<td><code>-D "cn=admin,..."</code></td>
+<td><code>-D "cn=Manager,..."</code></td>
 <td>Bind DN : le compte utilisé pour se connecter</td>
 </tr>
 <tr>
@@ -4171,41 +4280,29 @@
 <td>Demande le mot de passe de manière interactive</td>
 </tr>
 <tr>
-<td><code>-b "dc=lan,..."</code></td>
+<td><code>-b "dc=..."</code></td>
 <td>Base de recherche : point de départ dans l'arbre</td>
 </tr>
 <tr>
 <td><code>-f fichier.ldif</code></td>
-<td>Fichier LDIF à utiliser</td>
+<td>Fichier LDIF à injecter</td>
 </tr>
 </tbody>
 </table>
-<h3 id="structure-dun-fichier-modifldif">Structure d'un fichier modif.ldif</h3>
-<div class="language-ldif highlight"><span class="filename">modif.ldif</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">cn</span><span class="o">=</span><span class="s">younes</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">users</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">lan</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">local</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">changetype</span><span class="p">:</span><span class="w"> </span><span class="k">modify</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">replace</span><span class="p">:</span><span class="w"> </span><span class="na">mail          # Remplacer la valeur d&#39;un attribut existant</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="na">mail</span><span class="p">:</span><span class="w"> </span><span class="s">younes@lan.local</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">-</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">add</span><span class="p">:</span><span class="w"> </span><span class="na">telephoneNumber   # Ajouter un nouvel attribut</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="na">telephoneNumber</span><span class="p">:</span><span class="w"> </span><span class="s">0612345678</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">-</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="k">delete</span><span class="p">:</span><span class="w"> </span><span class="na">description    # Supprimer un attribut</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Le tiret <code>-</code></p>
-<p>Le tiret seul sur une ligne sépare les opérations dans un même fichier <code>modif.ldif</code>. Chaque bloc peut faire une action différente sur la même entrée.</p>
-</div>
-<h2 id="verifier-la-syntaxe-et-les-erreurs">Vérifier la syntaxe et les erreurs</h2>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>slaptest<span class="w">                                 </span><span class="c1"># Vérifier la configuration slapd</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>slaptest<span class="w"> </span>-u<span class="w">                              </span><span class="c1"># Vérifier sans ouvrir la base de données</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>-s<span class="w"> </span>base<span class="w">              </span><span class="c1"># Tester la connexion anonyme</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>slapd<span class="w"> </span>-f<span class="w">                   </span><span class="c1"># Logs en temps réel</span>
+<h2 id="verification-et-debug">Vérification et debug</h2>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>slaptest<span class="w"> </span>-f<span class="w"> </span>/etc/openldap/slapd.conf<span class="w"> </span>-v<span class="w">   </span><span class="c1"># Vérifier la config avant démarrage</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;dc=hassania,dc=ma&quot;</span><span class="w">      </span><span class="c1"># Tester que les données sont bien injectées</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>slapd<span class="w"> </span>-f<span class="w">                    </span><span class="c1"># Logs en temps réel</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Pare-feu</p>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="m">389</span><span class="w"> </span>accept<span class="w">    </span><span class="c1"># LDAP</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="m">636</span><span class="w"> </span>accept<span class="w">    </span><span class="c1"># LDAPS (SSL)</span>
+<p><div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>firewall-cmd<span class="w"> </span>--add-service<span class="o">=</span>ldap<span class="w"> </span>--permanent
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>firewall-cmd<span class="w"> </span>--reload
 </code></pre></div>
+Ou avec nftables :
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="m">389</span><span class="w"> </span>accept<span class="w">   </span><span class="c1"># LDAP</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>nft<span class="w"> </span>add<span class="w"> </span>rule<span class="w"> </span>inet<span class="w"> </span>filter<span class="w"> </span>input<span class="w"> </span>tcp<span class="w"> </span>dport<span class="w"> </span><span class="m">636</span><span class="w"> </span>accept<span class="w">   </span><span class="c1"># LDAPS</span>
+</code></pre></div></p>
 </div>
 
 
@@ -4256,12 +4353,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/cisco-prompt.js"></script>
+        <script src="../../../javascripts/cisco-prompt.js"></script>
       
     
   </body>

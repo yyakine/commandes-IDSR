@@ -449,12 +449,12 @@
   <a href="#modifier-les-permissions-chmod" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modifier les permissions - chmod
+        Modifier les permissions (chmod)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modifier les permissions - chmod">
+    <nav class="md-nav" aria-label="Modifier les permissions (chmod)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -488,7 +488,7 @@
   <a href="#modifier-le-proprietaire-chown" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modifier le propriétaire - chown
+        Modifier le propriétaire (chown)
       
     </span>
   </a>
@@ -499,7 +499,7 @@
   <a href="#modifier-le-groupe-chgrp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modifier le groupe - chgrp
+        Modifier le groupe (chgrp)
       
     </span>
   </a>
@@ -510,7 +510,7 @@
   <a href="#permissions-par-defaut-umask" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Permissions par défaut - umask
+        Permissions par défaut (umask)
       
     </span>
   </a>
@@ -1367,9 +1367,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../services/ldap.html" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1383,7 +1394,107 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/ldap/ldap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/ldap/slapd.conf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/ldap/slapd.d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.d
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3876,12 +3987,12 @@
   <a href="#modifier-les-permissions-chmod" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modifier les permissions - chmod
+        Modifier les permissions (chmod)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modifier les permissions - chmod">
+    <nav class="md-nav" aria-label="Modifier les permissions (chmod)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3915,7 +4026,7 @@
   <a href="#modifier-le-proprietaire-chown" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modifier le propriétaire - chown
+        Modifier le propriétaire (chown)
       
     </span>
   </a>
@@ -3926,7 +4037,7 @@
   <a href="#modifier-le-groupe-chgrp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modifier le groupe - chgrp
+        Modifier le groupe (chgrp)
       
     </span>
   </a>
@@ -3937,7 +4048,7 @@
   <a href="#permissions-par-defaut-umask" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Permissions par défaut - umask
+        Permissions par défaut (umask)
       
     </span>
   </a>
@@ -3963,7 +4074,7 @@
 
   <h1>Permissions et propriété</h1>
 
-<h2 id="modifier-les-permissions-chmod">Modifier les permissions - chmod</h2>
+<h2 id="modifier-les-permissions-chmod">Modifier les permissions (chmod)</h2>
 <h3 id="mode-symbolique">Mode symbolique</h3>
 <table>
 <thead>
@@ -4064,7 +4175,7 @@
 </code></pre></div>
 <div class="language-bash highlight"><span class="filename">Permissions récursives sur un dossier : u=rwx, g=r-x, o=---</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">750</span><span class="w"> </span>/var/www/mysite
 </code></pre></div>
-<h2 id="modifier-le-proprietaire-chown">Modifier le propriétaire - chown</h2>
+<h2 id="modifier-le-proprietaire-chown">Modifier le propriétaire (chown)</h2>
 <table>
 <thead>
 <tr>
@@ -4089,7 +4200,7 @@
 </table>
 <div class="language-bash highlight"><span class="filename">Changer le propriétaire d'un dossier et son contenu</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>stagiaire1<span class="w"> </span>/home/stagiaire1/projets
 </code></pre></div>
-<h2 id="modifier-le-groupe-chgrp">Modifier le groupe - chgrp</h2>
+<h2 id="modifier-le-groupe-chgrp">Modifier le groupe (chgrp)</h2>
 <table>
 <thead>
 <tr>
@@ -4110,7 +4221,7 @@
 </table>
 <div class="language-bash highlight"><span class="filename">Changer le groupe d'un fichier</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>chgrp<span class="w"> </span>equipe_dev<span class="w"> </span>rapport_final.md
 </code></pre></div>
-<h2 id="permissions-par-defaut-umask">Permissions par défaut - umask</h2>
+<h2 id="permissions-par-defaut-umask">Permissions par défaut (umask)</h2>
 <p><code>umask</code> définit les permissions <strong>retirées</strong> par défaut à chaque nouveau fichier ou dossier créé.</p>
 <blockquote>
 <p><code>umask</code> est temporaire, il s'applique uniquement pendant la session terminal en cours.</p>

@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rpm-red-hat-rocky-fedora" class="md-skip">
+        <a href="#rpm-red-hat-fedora" class="md-skip">
           Skip to content
         </a>
       
@@ -1356,9 +1356,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../services/ldap.html" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1372,7 +1383,107 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/ldap/ldap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/ldap/slapd.conf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/ldap/slapd.d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.d
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3935,7 +4046,7 @@
 
 
 
-<h1 id="rpm-red-hat-rocky-fedora">rpm — Red Hat / Rocky / Fedora</h1>
+<h1 id="rpm-red-hat-fedora">rpm (Red Hat / Fedora)</h1>
 <p><code>rpm</code> est le gestionnaire de packages bas niveau des distributions Red Hat. Contrairement à <code>dnf</code>, il ne résout pas les dépendances automatiquement. Il sert principalement à inspecter, installer des <code>.rpm</code> locaux et vérifier des packages.</p>
 <h2 id="installer-et-supprimer">Installer et supprimer</h2>
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rpm<span class="w"> </span>-ivh<span class="w"> </span>package.rpm<span class="w">          </span><span class="c1"># Installer un fichier .rpm local</span>

@@ -955,17 +955,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#alias-et-adresses-multiples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alias et adresses multiples
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1343,9 +1332,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../services/ldap.html" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1359,7 +1359,107 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/ldap/ldap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/ldap/slapd.conf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/ldap/slapd.d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.d
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3883,17 +3983,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#alias-et-adresses-multiples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alias et adresses multiples
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3912,91 +4001,94 @@
 
 
 <h1 id="interfaces-et-adressage">Interfaces et adressage</h1>
-<p>Sous Linux, la gestion réseau passe par deux couches : les commandes <code>ip</code> pour la configuration temporaire (perdue au reboot), et les fichiers de configuration persistants qui diffèrent selon la distribution.</p>
+<p>Red Hat et Fedora Linux utilisent par défaut <code>iproute2</code> et <code>NetworkManager</code> pour configurer les interfaces.</p>
+<p>Debian/Ubuntu incluent <code>iproute2</code> et <strong>netplan</strong>.</p>
 <h2 id="inspecter-les-interfaces">Inspecter les interfaces</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">iproute2</label><label for="__tabbed_1_2">NetworkManager</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ip<span class="w"> </span>link<span class="w"> </span>show<span class="w">                  </span><span class="c1"># Lister toutes les interfaces et leur état (UP/DOWN)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w">                  </span><span class="c1"># Lister les interfaces avec leurs adresses IP</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0<span class="w">             </span><span class="c1"># Détails d&#39;une interface spécifique</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>ip<span class="w"> </span>-brief<span class="w"> </span>addr<span class="w"> </span>show<span class="w">           </span><span class="c1"># Vue compacte : interface, état, IP</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show<span class="w">               </span><span class="c1"># IPv4 uniquement</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>ip<span class="w"> </span>-6<span class="w"> </span>addr<span class="w"> </span>show<span class="w">               </span><span class="c1"># IPv6 uniquement</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nmcli<span class="w"> </span>device<span class="w"> </span>status<span class="w">                   </span><span class="c1"># Lister toutes les interfaces et leur état</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>nmcli<span class="w"> </span>device<span class="w"> </span>show<span class="w">                     </span><span class="c1"># Lister les interfaces avec leurs adresses IP</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>nmcli<span class="w"> </span>device<span class="w"> </span>show<span class="w"> </span>eth0<span class="w">                </span><span class="c1"># Détails d&#39;une interface spécifique</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="configuration-temporaire-ip">Configuration temporaire (ip)</h2>
 <p>Ces commandes s'appliquent immédiatement mais sont perdues au redémarrage.</p>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Adresse IP</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ip<span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span><span class="m">192</span>.168.1.10/24<span class="w"> </span>dev<span class="w"> </span>eth0<span class="w">      </span><span class="c1"># Ajouter une adresse IP</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>ip<span class="w"> </span>addr<span class="w"> </span>del<span class="w"> </span><span class="m">192</span>.168.1.10/24<span class="w"> </span>dev<span class="w"> </span>eth0<span class="w">      </span><span class="c1"># Supprimer une adresse IP</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># État de l&#39;interface</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>up<span class="w">                        </span><span class="c1"># Activer une interface</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>down<span class="w">                      </span><span class="c1"># Désactiver une interface</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Adresse MAC temporaire</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>address<span class="w"> </span><span class="m">00</span>:11:22:33:44:55
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Adresse IP</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ip<span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span><span class="m">192</span>.168.1.10/24<span class="w"> </span>dev<span class="w"> </span>eth0<span class="w">      </span><span class="c1"># Ajouter une adresse IP</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>ip<span class="w"> </span>addr<span class="w"> </span>del<span class="w"> </span><span class="m">192</span>.168.1.10/24<span class="w"> </span>dev<span class="w"> </span>eth0<span class="w">      </span><span class="c1"># Supprimer une adresse IP</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># État de l&#39;interface</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>up<span class="w">                        </span><span class="c1"># Activer une interface</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>down<span class="w">                      </span><span class="c1"># Désactiver une interface</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Adresse MAC temporaire</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>address<span class="w"> </span><span class="m">00</span>:11:22:33:44:55
 </code></pre></div>
 <h2 id="configuration-persistante">Configuration persistante</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian / Ubuntu</label><label for="__tabbed_1_2">Red Hat / Rocky / Fedora</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian / Ubuntu</label><label for="__tabbed_2_2">Red Hat / Fedora</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Debian utilise <strong>Netplan</strong> (Ubuntu 18.04+).</p>
 <p><strong>Netplan</strong> — fichier YAML dans <code>/etc/netplan/</code> :</p>
-<div class="language-yaml highlight"><span class="filename">/etc/netplan/01-netcfg.yaml — IP statique</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">network</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">ethernets</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">eth0</span><span class="p">:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">addresses</span><span class="p">:</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.10/24</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">routes</span><span class="p">:</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">          </span><span class="nt">via</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.1</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="nt">nameservers</span><span class="p">:</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8.8.8.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.1.1.1</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-</code></pre></div>
-<div class="language-yaml highlight"><span class="filename">/etc/netplan/01-netcfg.yaml — DHCP</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">network</span><span class="p">:</span>
+<div class="language-yaml highlight"><span class="filename">/etc/netplan/01-netcfg.yaml — IP statique</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">network</span><span class="p">:</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">ethernets</span><span class="p">:</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">eth0</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="nt">addresses</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.10/24</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="nt">routes</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">          </span><span class="nt">via</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.1</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="nt">nameservers</span><span class="p">:</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8.8.8.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.1.1.1</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>netplan<span class="w"> </span>apply<span class="w">               </span><span class="c1"># Appliquer la configuration Netplan</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>netplan<span class="w"> </span>try<span class="w">                 </span><span class="c1"># Tester avec rollback automatique si pas confirmé</span>
+<div class="language-yaml highlight"><span class="filename">/etc/netplan/01-netcfg.yaml — DHCP</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">network</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">ethernets</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">eth0</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>netplan<span class="w"> </span>apply<span class="w">               </span><span class="c1"># Appliquer la configuration Netplan</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>netplan<span class="w"> </span>try<span class="w">                 </span><span class="c1"># Tester avec rollback automatique si pas confirmé</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>Red Hat utilise <strong>NetworkManager</strong> via <code>nmcli</code>.
 <strong>nmcli</strong>:</p>
-<div class="language-bash highlight"><span class="filename">IP statique avec nmcli</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.addresses<span class="w"> </span><span class="m">192</span>.168.1.10/24
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.gateway<span class="w"> </span><span class="m">192</span>.168.1.1
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.dns<span class="w"> </span><span class="s2">&quot;8.8.8.8 1.1.1.1&quot;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.method<span class="w"> </span>manual
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>nmcli<span class="w"> </span>con<span class="w"> </span>up<span class="w"> </span>eth0
+<div class="language-bash highlight"><span class="filename">IP statique avec nmcli</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.addresses<span class="w"> </span><span class="m">192</span>.168.1.10/24
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.gateway<span class="w"> </span><span class="m">192</span>.168.1.1
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.dns<span class="w"> </span><span class="s2">&quot;8.8.8.8 1.1.1.1&quot;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.method<span class="w"> </span>manual
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>nmcli<span class="w"> </span>con<span class="w"> </span>up<span class="w"> </span>eth0
 </code></pre></div>
-<div class="language-bash highlight"><span class="filename">DHCP avec nmcli</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.method<span class="w"> </span>auto
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>nmcli<span class="w"> </span>con<span class="w"> </span>up<span class="w"> </span>eth0
+<div class="language-bash highlight"><span class="filename">Ajout d'adresses IP à une connexion nmcli</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>+ipv4.addresses<span class="w"> </span><span class="s2">&quot;192.168.1.11/24,192.168.1.12/24&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1">#Utiliser -ipv4.addresses pour supprimer des adresses</span>
 </code></pre></div>
-<div class="language-bash highlight"><span class="filename">Créer une nouvelle connexion</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>add<span class="w"> </span><span class="nb">type</span><span class="w"> </span>ethernet<span class="w"> </span>ifname<span class="w"> </span>eth0<span class="w"> </span>con-name<span class="w"> </span>eth0<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>ipv4.addresses<span class="w"> </span><span class="m">192</span>.168.1.10/24<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span>ipv4.gateway<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span>ipv4.dns<span class="w"> </span><span class="s2">&quot;8.8.8.8&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span>ipv4.method<span class="w"> </span>manual
+<div class="language-bash highlight"><span class="filename">DHCP avec nmcli</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>mod<span class="w"> </span>eth0<span class="w"> </span>ipv4.method<span class="w"> </span>auto
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>nmcli<span class="w"> </span>con<span class="w"> </span>up<span class="w"> </span>eth0
 </code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>reload<span class="w">            </span><span class="c1"># Recharger les fichiers de configuration</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>nmcli<span class="w"> </span>con<span class="w"> </span>up<span class="w"> </span>eth0<span class="w">           </span><span class="c1"># Appliquer sur l&#39;interface</span>
+<div class="language-bash highlight"><span class="filename">Créer une nouvelle connexion</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>add<span class="w"> </span><span class="nb">type</span><span class="w"> </span>ethernet<span class="w"> </span>ifname<span class="w"> </span>eth0<span class="w"> </span>con-name<span class="w"> </span>eth0<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span>ipv4.addresses<span class="w"> </span><span class="m">192</span>.168.1.10/24<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span>ipv4.gateway<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span>ipv4.dns<span class="w"> </span><span class="s2">&quot;8.8.8.8&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span>ipv4.method<span class="w"> </span>manual
+</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>nmcli<span class="w"> </span>con<span class="w"> </span>reload<span class="w">            </span><span class="c1"># Recharger les fichiers de configuration</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>nmcli<span class="w"> </span>con<span class="w"> </span>up<span class="w"> </span>eth0<span class="w">           </span><span class="c1"># Appliquer sur l&#39;interface</span>
 </code></pre></div>
 </div>
 </div>
-</div>
-<h2 id="alias-et-adresses-multiples">Alias et adresses multiples</h2>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Ajouter une deuxième adresse sur la même interface</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>ip<span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span><span class="m">10</span>.0.0.1/24<span class="w"> </span>dev<span class="w"> </span>eth0
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Vérifier</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Plusieurs adresses sur une interface</p>
-<p>Contrairement aux sous-interfaces (<code>eth0:0</code> de l'ancienne méthode), <code>ip addr add</code> permet d'assigner plusieurs adresses à la même interface directement, sans créer d'alias virtuel.</p>
 </div>
 
 

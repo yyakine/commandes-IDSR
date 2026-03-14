@@ -1354,9 +1354,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="ldap.html" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1370,7 +1381,107 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldap/ldap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldap/slapd.conf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ldap/slapd.d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.d
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3933,7 +4044,8 @@
 
 
 
-<h1 id="dhcp-isc-dhcp-server">DHCP — isc-dhcp-server</h1>
+<h1 id="dhcp-isc-dhcp-server">DHCP (isc-dhcp-server</h1>
+<p>)</p>
 <h2 id="installation">Installation</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian / Ubuntu</label><label for="__tabbed_1_2">Red Hat / Rocky / Fedora</label></div>
 <div class="tabbed-content">
@@ -4003,7 +4115,7 @@
 </code></pre></div>
 </div>
 <h2 id="verifier-la-syntaxe-et-les-erreurs">Vérifier la syntaxe et les erreurs</h2>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>dhcpd<span class="w"> </span>-t<span class="w"> </span>-cf<span class="w"> </span>/etc/dhcp/dhcpd.conf<span class="w">       </span><span class="c1"># Tester la syntaxe sans démarrer</span>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>dhcpd<span class="w"> </span>-t<span class="w"> </span>-cf<span class="w"> </span>/etc/dhcp/dhcpd.conf<span class="w">        </span><span class="c1"># Tester la syntaxe sans démarrer</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>dhcpd<span class="w"> </span>-f<span class="w">                   </span><span class="c1"># Logs en temps réel (Red Hat)</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>isc-dhcp-server<span class="w"> </span>-f<span class="w">         </span><span class="c1"># Logs en temps réel (Debian)</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>cat<span class="w"> </span>/var/lib/dhcp/dhcpd.leases<span class="w">           </span><span class="c1"># Baux actifs (Debian)</span>

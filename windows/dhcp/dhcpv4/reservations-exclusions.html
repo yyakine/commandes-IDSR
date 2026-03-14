@@ -1248,9 +1248,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../linux/services/ldap.html" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1264,7 +1275,107 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/services/ldap/ldap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/services/ldap/slapd.conf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/services/ldap/slapd.d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.d
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2056,10 +2167,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#add-dhcpserverv4reservation-reserver-une-adresse" class="md-nav__link">
+  <a href="#reserver-une-adresse-add-dhcpserverv4reservation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Add-DhcpServerv4Reservation — Réserver une adresse
+        Réserver une adresse (Add-DhcpServerv4Reservation)
       
     </span>
   </a>
@@ -2067,10 +2178,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-dhcpserverv4exclusionrange-exclure-une-plage" class="md-nav__link">
+  <a href="#exclure-une-plage-add-dhcpserverv4exclusionrange" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Add-DhcpServerv4ExclusionRange — Exclure une plage
+        Exclure une plage (Add-DhcpServerv4ExclusionRange)
       
     </span>
   </a>
@@ -3831,10 +3942,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#add-dhcpserverv4reservation-reserver-une-adresse" class="md-nav__link">
+  <a href="#reserver-une-adresse-add-dhcpserverv4reservation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Add-DhcpServerv4Reservation — Réserver une adresse
+        Réserver une adresse (Add-DhcpServerv4Reservation)
       
     </span>
   </a>
@@ -3842,10 +3953,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-dhcpserverv4exclusionrange-exclure-une-plage" class="md-nav__link">
+  <a href="#exclure-une-plage-add-dhcpserverv4exclusionrange" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Add-DhcpServerv4ExclusionRange — Exclure une plage
+        Exclure une plage (Add-DhcpServerv4ExclusionRange)
       
     </span>
   </a>
@@ -3870,7 +3981,7 @@
 
 
 <h1 id="reservations-et-exclusions-dhcpv4">Réservations et exclusions DHCPv4</h1>
-<h2 id="add-dhcpserverv4reservation-reserver-une-adresse">Add-DhcpServerv4Reservation — Réserver une adresse</h2>
+<h2 id="reserver-une-adresse-add-dhcpserverv4reservation">Réserver une adresse (Add-DhcpServerv4Reservation)</h2>
 <p>Une réservation attribue <strong>toujours la même adresse IP</strong> à un client identifié par son adresse MAC.</p>
 <div class="language-powershell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">Add-DhcpServerv4Reservation</span> <span class="p">`</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">-ScopeId</span>     <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">0</span> <span class="p">`</span>
@@ -3915,7 +4026,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="add-dhcpserverv4exclusionrange-exclure-une-plage">Add-DhcpServerv4ExclusionRange — Exclure une plage</h2>
+<h2 id="exclure-une-plage-add-dhcpserverv4exclusionrange">Exclure une plage (Add-DhcpServerv4ExclusionRange)</h2>
 <p>Une exclusion empêche le serveur DHCP de distribuer les adresses d'une plage (ex: adresses réservées aux équipements statiques).</p>
 <div class="language-powershell highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Add-DhcpServerv4ExclusionRange</span> <span class="p">`</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">-ScopeId</span>    <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">0</span> <span class="p">`</span>

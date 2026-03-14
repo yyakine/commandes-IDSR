@@ -1248,9 +1248,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../linux/services/ldap.html" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1264,7 +1275,107 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/services/ldap/ldap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/services/ldap/slapd.conf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/services/ldap/slapd.d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.d
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1695,10 +1806,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#move-adobject-deplacer-un-objet" class="md-nav__link">
+  <a href="#deplacer-un-objet-move-adobject" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Move-ADObject — Déplacer un objet
+        Déplacer un objet (Move-ADObject)
       
     </span>
   </a>
@@ -3831,10 +3942,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#move-adobject-deplacer-un-objet" class="md-nav__link">
+  <a href="#deplacer-un-objet-move-adobject" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Move-ADObject — Déplacer un objet
+        Déplacer un objet (Move-ADObject)
       
     </span>
   </a>
@@ -3870,7 +3981,7 @@
 
 
 <h1 id="deplacer-des-objets">Déplacer des objets</h1>
-<h2 id="move-adobject-deplacer-un-objet">Move-ADObject — Déplacer un objet</h2>
+<h2 id="deplacer-un-objet-move-adobject">Déplacer un objet (Move-ADObject)</h2>
 <div class="language-powershell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># Déplacer un utilisateur vers une autre OU</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Move-ADObject</span> <span class="p">`</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">-Identity</span> <span class="s2">&quot;CN=jdoe,OU=Users,DC=domain,DC=com&quot;</span> <span class="p">`</span>

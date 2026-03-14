@@ -1056,15 +1056,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#frr-frrouting" class="md-nav__link">
+  <a href="#frrouting-frr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FRR — FRRouting
+        FRRouting (FRR)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="FRR — FRRouting">
+    <nav class="md-nav" aria-label="FRRouting (FRR)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1143,7 +1143,7 @@
   <a href="#configuration-cote-routeur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration — côté routeur
+        Configuration côté routeur
       
     </span>
   </a>
@@ -1154,7 +1154,7 @@
   <a href="#configuration-cote-client" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration — côté client
+        Configuration côté client
       
     </span>
   </a>
@@ -1412,9 +1412,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../services/ldap.html" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_7" id="__nav_1_5_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1428,7 +1439,107 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LDAP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/ldap/ldap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/ldap/slapd.conf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.conf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/ldap/slapd.d.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    slapd.d
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3920,15 +4031,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#frr-frrouting" class="md-nav__link">
+  <a href="#frrouting-frr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FRR — FRRouting
+        FRRouting (FRR)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="FRR — FRRouting">
+    <nav class="md-nav" aria-label="FRRouting (FRR)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4007,7 +4118,7 @@
   <a href="#configuration-cote-routeur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration — côté routeur
+        Configuration côté routeur
       
     </span>
   </a>
@@ -4018,7 +4129,7 @@
   <a href="#configuration-cote-client" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration — côté client
+        Configuration côté client
       
     </span>
   </a>
@@ -4048,9 +4159,9 @@
 
 
 <h1 id="routage-dynamique">Routage dynamique</h1>
-<p>Le routage dynamique permet aux routeurs d'échanger automatiquement leurs tables de routage via des protocoles dédiés. Sous Linux, deux logiciels sont couramment utilisés : <strong>FRR</strong> (FRRouting) et <strong>Bird</strong>.</p>
-<h2 id="frr-frrouting">FRR — FRRouting</h2>
-<p>FRR est le successeur de Quagga. Il supporte OSPF, BGP, RIP et d'autres protocoles. La configuration se fait via un shell interactif appelé <code>vtysh</code>.</p>
+<p>Sous Linux, deux logiciels sont couramment utilisés : <strong>FRR</strong> (FRRouting) et <strong>Bird</strong>.</p>
+<h2 id="frrouting-frr">FRRouting (FRR)</h2>
+<p>FRR supporte OSPF, BGP, RIP et d'autres protocoles. La configuration se fait via un shell interactif <code>vtysh</code>.</p>
 <h3 id="installation">Installation</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian/Ubuntu</label><label for="__tabbed_1_2">Red Hat/Fedora</label></div>
 <div class="tabbed-content">
@@ -4085,7 +4196,7 @@
 </code></pre></div>
 <hr />
 <h2 id="bird">Bird</h2>
-<p>Bird est un daemon de routage léger supportant RIP, OSPF et BGP. Il fonctionne en mode serveur (routeur) et client (machines qui reçoivent les routes).</p>
+<p>Bird est un daemon de routage léger supportant RIP, OSPF et BGP. Il fonctionne en mode serveur (routeur) et client.</p>
 <h3 id="installation_1">Installation</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian / Ubuntu</label><label for="__tabbed_2_2">Red Hat / Rocky / Fedora</label></div>
 <div class="tabbed-content">
@@ -4099,7 +4210,7 @@
 </div>
 </div>
 </div>
-<h3 id="configuration-cote-routeur">Configuration — côté routeur</h3>
+<h3 id="configuration-cote-routeur">Configuration côté routeur</h3>
 <div class="language-bash highlight"><span class="filename">/etc/bird.conf — serveur</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>protocol<span class="w"> </span>kernel<span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span>persist<span class="p">;</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span>scan<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">20</span><span class="p">;</span>
@@ -4122,7 +4233,7 @@
 <a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">    </span>interface<span class="w"> </span><span class="s2">&quot;eth*&quot;</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>mode<span class="w"> </span>broadcast<span class="p">;</span><span class="w"> </span><span class="o">}</span><span class="p">;</span>
 <a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="o">}</span>
 </code></pre></div>
-<h3 id="configuration-cote-client">Configuration — côté client</h3>
+<h3 id="configuration-cote-client">Configuration côté client</h3>
 <div class="language-bash highlight"><span class="filename">/etc/bird.conf — client</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>protocol<span class="w"> </span>kernel<span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span>learn<span class="p">;</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span>import<span class="w"> </span>all<span class="p">;</span>
